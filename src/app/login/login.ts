@@ -13,6 +13,6 @@ export class LoginComponent {
 
   onSignIn() {
     // Navigate to next page
-    this.router.navigate(['/home']);
+    this.router.navigate(['/okta-login']);
   }
 }

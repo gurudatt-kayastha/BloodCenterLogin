@@ -1,0 +1,68 @@
+<div class="okta-root">
+  <!-- Top strip -->
+  <header class="okta-header">
+    <div class="header-inner">
+      <div class="header-title">Connecting to</div>
+      <div class="header-subtitle">
+        <span class="gear-icon">⚙</span>
+        <span>
+          Sign in with your account to access
+          <strong>WST_Internal_Transfusion</strong>
+        </span>
+        <span class="env-tag">DEV</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="okta-main">
+    <!-- Background shapes -->
+    <div class="bg-shape bg-left"></div>
+    <div class="bg-shape bg-center"></div>
+    <div class="bg-shape bg-right"></div>
+
+    <!-- Login card -->
+    <section class="login-card">
+      <div class="login-card-inner">
+        <!-- Logo -->
+        <div class="logo-row">
+          <div class="logo-mark">
+            <span class="logo-triangle logo-triangle-left"></span>
+            <span class="logo-triangle logo-triangle-right"></span>
+          </div>
+          <span class="logo-text">Well<span>Sky</span>.</span>
+        </div>
+
+        <h2 class="login-title">Sign In</h2>
+
+        <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <label class="field-label" for="username">Username</label>
+          <input
+            id="username"
+            type="email"
+            class="field-input"
+            formControlName="username"
+            placeholder="sanghavi.appam@wellsky.com"
+          />
+          <div class="field-error" *ngIf="loginForm.get('username')?.touched && loginForm.get('username')?.invalid">
+            Please enter a valid email.
+          </div>
+
+          <label class="checkbox-row">
+            <input type="checkbox" formControlName="keepSignedIn" />
+            <span>Keep me signed in</span>
+          </label>
+
+          <button type="submit" class="btn-primary">
+            Next
+          </button>
+
+          <div class="links-row">
+            <a href="#" class="link">Unlock account?</a>
+            <a href="#" class="link">Help</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</div>

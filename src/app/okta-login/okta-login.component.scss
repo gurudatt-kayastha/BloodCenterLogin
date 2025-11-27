@@ -1,0 +1,273 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:host {
+  display: block;
+}
+
+body {
+  margin: 0;
+}
+
+/* Root layout */
+.okta-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #e6e0d2;
+}
+
+/* Header strip */
+.okta-header {
+  background: #f5f3ee;
+  border-bottom: 1px solid #e0ddd5;
+  padding: 16px 40px 12px;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.header-subtitle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #666;
+}
+
+.gear-icon {
+  font-size: 14px;
+}
+
+.env-tag {
+  margin-left: 4px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  border: 1px solid #c6c1b5;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+}
+
+/* Main area */
+.okta-main {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background shapes */
+.bg-shape {
+  position: absolute;
+  height: 120%;
+  width: 65%;
+  transform-origin: center;
+}
+
+.bg-left {
+  background: #6faeb4;
+  transform: rotate(-35deg);
+  left: -35%;
+  top: 30%;
+}
+
+.bg-center {
+  background: #214155;
+  transform: rotate(-35deg);
+  left: -10%;
+  top: 33%;
+}
+
+.bg-right {
+  background: #d8832a;
+  transform: rotate(-35deg);
+  left: 25%;
+  top: 40%;
+}
+
+/* Login card */
+.login-card {
+  position: relative;
+  z-index: 1;
+  width: 420px;
+  max-width: 90%;
+}
+
+.login-card-inner {
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+  padding: 32px 40px 28px;
+}
+
+/* Logo */
+.logo-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.logo-mark {
+  position: relative;
+  width: 54px;
+  height: 26px;
+}
+
+.logo-triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.logo-triangle-left {
+  border-width: 0 26px 26px 0;
+  border-color: transparent #214155 transparent transparent;
+  left: 0;
+  bottom: 0;
+}
+
+.logo-triangle-right {
+  border-width: 0 0 26px 26px;
+  border-color: transparent transparent #d8832a transparent;
+  right: 0;
+  bottom: 0;
+}
+
+.logo-text {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #384a5a;
+}
+
+.logo-text span {
+  color: #4bb5c3;
+}
+
+/* Title */
+.login-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+/* Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.field-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+}
+
+.field-input {
+  border-radius: 3px;
+  border: 1px solid #c7ccd1;
+  padding: 10px 10px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field-input:focus {
+  border-color: #4bb5c3;
+  box-shadow: 0 0 0 1px #4bb5c3;
+}
+
+.field-error {
+  font-size: 11px;
+  color: #b3261e;
+}
+
+/* Checkbox */
+.checkbox-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #555;
+  margin-top: 4px;
+}
+
+.checkbox-row input[type='checkbox'] {
+  width: 14px;
+  height: 14px;
+}
+
+/* Button */
+.btn-primary {
+  margin-top: 8px;
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: 600;
+  background: #007c79;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+
+.btn-primary:hover {
+  background: #016965;
+}
+
+.btn-primary:active {
+  transform: scale(0.99);
+}
+
+/* Links */
+.links-row {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  font-size: 12px;
+}
+
+.link {
+  color: #0072ce;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .okta-header {
+    padding: 12px 18px;
+  }
+
+  .login-card-inner {
+    padding: 24px 20px 22px;
+  }
+
+  .bg-left,
+  .bg-center,
+  .bg-right {
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background-color: #1f2a37; // dark blue-gray background
+  color: #cbd5e1; // light gray text
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 15px;
+  user-select: none;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+
+  .item {
+    display: flex;
+    align-items: center;
+    padding: 14px 24px;
+    cursor: pointer;
+    border-left: 4px solid transparent;
+    transition:
+      background-color 0.25s ease,
+      border-color 0.25s ease,
+      color 0.25s ease;
+
+    &:hover {
+      background-color: #2e3b4e; // lighter on hover
+      color: #f1f5f9;
+    }
+
+    &:focus-visible {
+      outline: none;
+      background-color: #33465b;
+      border-left-color: #4f8ef7; // blue outline on keyboard focus
+      color: #f8fafc;
+    }
+
+    &.active {
+      background-color: #22354a; // darker blue for active
+      border-left-color: #ff8c00; // orange border
+      color: #ffb347; // lighter orange text
+      font-weight: 600;
+    }
+
+    &.emergency {
+      color: #ff8c00;
+      font-weight: 600;
+    }
+
+    .icon {
+      font-family: 'Material Icons';
+      font-size: 20px;
+      margin-right: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: inherit;
+    }
+
+    .label {
+      flex: 1;
+      white-space: nowrap;
+    }
+  }
+
+  .collapse {
+    margin-top: auto;
+    padding: 12px 24px;
+    background-color: #22354a;
+    font-weight: 600;
+    text-align: right;
+    cursor: pointer;
+    color: #94a3b8;
+
+    &:hover {
+      background-color: #33465b;
+      color: #f1f5f9;
+    }
+
+    &:focus-visible {
+      outline: none;
+      background-color: #33465b;
+      color: #f1f5f9;
+    }
+  }
+}
